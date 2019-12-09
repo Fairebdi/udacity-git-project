@@ -21,7 +21,7 @@ def get_filters():
 
     
     print('Hello! Let\'s explore some US bikeshare data!')
-    #test 
+    
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input("select city:").strip().lower()
     while city not in [ 'chicago', 'new york city' , 'washington']:
@@ -31,7 +31,7 @@ def get_filters():
 
 
    # TO DO: get user input for month (all, january, february, ... , june)
-    month = input("select month:").strip().capitalize()
+    month = input("Select Month:").strip().capitalize()
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input("select day of the week:").strip().capitalize()
     print('-'*40)
@@ -162,7 +162,18 @@ def main():
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
-        user_stats(df)
+        user_stats(df) 
+        n=5
+        raw_data = input ('would you like to display raw data? enter yes or stop: ').lower()
+        while raw_data == 'yes': 
+            print(df.head(n))
+            n+=5
+            raw_data = input ('would you like to display raw data? enter yes or stop: ').lower()
+            if raw_data == 'yes': 
+                print(df.head(n))
+                n+=5
+            elif raw_data == 'stop':
+                break
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
