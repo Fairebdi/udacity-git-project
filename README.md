@@ -12,4 +12,4 @@ Use Python to explore data related to bike share systems for three major cities 
 README.md file
 
 ### Credits
-Udacity
+Udacity.com
