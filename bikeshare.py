@@ -26,14 +26,14 @@ def get_filters():
     city = input("select city:").strip().lower()
     while city not in [ 'chicago', 'new york city' , 'washington']:
              print('invalid inputs!')
-             city = input('enter city (chicago, new york city, washington)').strip().lower()
+             city = input('Enter City (chicago, new york city, washington)').strip().lower()
              break
 
 
    # TO DO: get user input for month (all, january, february, ... , june)
     month = input("Select Month:").strip().capitalize()
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    day = input("select day of the week:").strip().capitalize()
+    day = input("Select Day Of The Week:").strip().capitalize()
     print('-'*40)
     return city, month, day
 
@@ -93,7 +93,7 @@ def station_stats(df):
     # TO DO: display most commonly used start station
     
     most_common_start_station = df['Start Station'].mode()[0] 
-    print("The most commonly start station:", most_common_start_station)
+    print("The Most Commonly start station:", most_common_start_station)
 
     # TO DO: display most commonly used end station
     df['End Station']= df['End Station']
